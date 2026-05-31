@@ -22,7 +22,7 @@ export function HeroSection() {
             <Sparkles className="mr-2 h-3.5 w-3.5" />
             Website, app, SEO, and ads partner for growing businesses
           </Badge>
-          <h1 className="max-w-full text-[2.65rem] font-semibold leading-[0.95] tracking-[-0.05em] text-slate-950 dark:text-white sm:max-w-5xl sm:text-6xl lg:text-6xl xl:text-7xl">
+          <h1 className="max-w-full text-[2.40rem] font-semibold leading-[0.95] tracking-[-0.05em] text-slate-950 dark:text-white sm:max-w-5xl sm:text-6xl lg:text-6xl xl:text-7xl">
             <span className="block sm:whitespace-nowrap">We Build Modern</span>
             <span className="block sm:whitespace-nowrap">Websites, Apps &</span>
             <span className="block sm:whitespace-nowrap">Meta Ads Campaign</span>
