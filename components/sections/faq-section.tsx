@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/sections/reveal";
@@ -21,16 +18,13 @@ export function FaqSection() {
         <Stagger className="mt-12 grid gap-4">
           {faqs.map((faq) => (
             <StaggerItem key={faq.question}>
-              <motion.details
-                whileHover={{ scale: 1.01 }}
-                className="group rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/[0.04]"
-              >
+              <details className="group rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm backdrop-blur transition duration-300 hover:scale-[1.01] dark:border-white/10 dark:bg-white/[0.04]">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-base font-semibold text-slate-950 dark:text-white">
                   {faq.question}
                   <ChevronDown className="h-5 w-5 shrink-0 text-cyan-500 transition group-open:rotate-180" />
                 </summary>
                 <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-400">{faq.answer}</p>
-              </motion.details>
+              </details>
             </StaggerItem>
           ))}
         </Stagger>

@@ -1,18 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Mail } from "lucide-react";
-import { FaGithub, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { ArrowUpRight, Mail, MessageCircle, Phone } from "lucide-react";
 
-import { buttonVariants } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { navItems, offices, services } from "@/lib/site-data";
-import { cn } from "@/lib/utils";
 
 const socials = [
-  { label: "X", icon: FaXTwitter, href: "https://x.com" },
-  { label: "LinkedIn", icon: FaLinkedinIn, href: "https://linkedin.com" },
-  { label: "GitHub", icon: FaGithub, href: "https://github.com" },
-  { label: "Instagram", icon: FaInstagram, href: "https://instagram.com" },
+  { label: "X", text: "X", href: "https://x.com" },
+  { label: "LinkedIn", text: "in", href: "https://linkedin.com" },
+  { label: "GitHub", text: "GH", href: "https://github.com" },
+  { label: "Instagram", text: "IG", href: "https://instagram.com" },
 ];
 
 export function Footer() {
@@ -27,44 +24,58 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-flex items-center gap-4">
               <Image
-                src="/appxdeploy-logo.png"
-                alt="AppxDeploy"
+                src="/awaylabs-logo.png"
+                alt="AwayLabs"
                 width={160}
                 height={160}
                 className="h-20 w-20 rounded-[1.5rem] object-cover ring-1 ring-cyan-300/30 shadow-[0_0_45px_rgba(59,130,246,0.28)]"
               />
               <span className="leading-none">
                 <span className="block text-3xl font-black tracking-[-0.05em] text-slate-950 dark:text-white">
-                  App<span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">x</span>Deploy
+                  Away<span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">Labs</span>
                 </span>
                 <span className="mt-2 block text-[11px] font-semibold uppercase tracking-[0.3em] text-cyan-600 dark:text-cyan-300">
-                  Deploy • Scale • Succeed
+                  Build • Rank • Grow
                 </span>
               </span>
             </Link>
             <p className="max-w-sm text-sm leading-7">
-              Modern apps, websites, cloud infrastructure, SEO, and marketing systems for startups and ambitious businesses.
+              Modern websites, apps, SEO optimization, Google Ads, and Meta Ads for startups and growing businesses.
             </p>
-            <Link
-              href="mailto:connect@appxdeploy.com"
-              className="inline-flex text-sm font-semibold text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
-            >
-              connect@appxdeploy.com
-            </Link>
+            <div className="grid gap-2 text-sm font-semibold">
+              <Link
+                href="mailto:connect@awaylabs.in"
+                className="inline-flex items-center gap-2 text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+              >
+                <Mail className="h-4 w-4" />
+                connect@awaylabs.in
+              </Link>
+              <Link
+                href="tel:+919908463421"
+                className="inline-flex items-center gap-2 text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+              >
+                <Phone className="h-4 w-4" />
+                +91 99084 63421
+              </Link>
+              <Link
+                href="https://wa.me/919908463421"
+                className="inline-flex items-center gap-2 text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+              >
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp us
+              </Link>
+            </div>
             <div className="flex gap-3">
-              {socials.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <Link
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-600 transition hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-500 dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
-                  >
-                    <Icon className="h-4 w-4" />
-                  </Link>
-                );
-              })}
+              {socials.map((social) => (
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-600 transition hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-500 dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
+                >
+                  <span className="text-xs font-bold">{social.text}</span>
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -92,15 +103,10 @@ export function Footer() {
                 Newsletter
               </h3>
               <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Get launch ideas, product notes, and cloud optimization tips.
+                Get launch ideas, product notes, SEO tips, and campaign optimization notes.
               </p>
             </div>
-            <form className="flex gap-2" aria-label="Newsletter subscription">
-              <Input type="email" placeholder="you@company.com" aria-label="Email address" />
-              <button className={cn(buttonVariants({ variant: "gradient", size: "icon" }), "shrink-0")} aria-label="Subscribe">
-                <Mail className="h-4 w-4" />
-              </button>
-            </form>
+            <NewsletterForm />
           </div>
         </div>
 
@@ -120,7 +126,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 flex flex-col gap-3 border-t border-slate-200 pt-6 text-sm dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} AppxDeploy. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AwayLabs. All rights reserved.</p>
           <Link href="/contact" className="inline-flex items-center gap-1 font-medium text-cyan-600 dark:text-cyan-300">
             Start a project <ArrowUpRight className="h-4 w-4" />
           </Link>

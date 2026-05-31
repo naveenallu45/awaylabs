@@ -32,16 +32,41 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
 
   return {
-    title: service.title,
-    description: `${service.description} Explore AppxDeploy's ${service.title.toLowerCase()} approach, deliverables, process, and launch support.`,
+    title: `${service.title} Services`,
+    description: `${service.description} Work with AwayLabs for ${service.title.toLowerCase()} in Hyderabad and remotely, with strategy, execution, launch support, and growth-focused optimization.`,
+    keywords: [
+      service.title,
+      `${service.title} Hyderabad`,
+      `${service.title} agency`,
+      "AwayLabs",
+      "website development",
+      "app development",
+      "SEO optimization",
+      "Google Ads",
+      "Meta Ads",
+    ],
     alternates: {
       canonical: `/services/${slug}`,
     },
     openGraph: {
-      title: `${service.title} | AppxDeploy`,
-      description: service.description,
+      title: `${service.title} Services | AwayLabs`,
+      description: `${service.description} Plan, build, launch, and optimize with AwayLabs.`,
       url: `/services/${slug}`,
       type: "website",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: `${service.title} services by AwayLabs`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} Services | AwayLabs`,
+      description: service.description,
+      images: ["/opengraph-image"],
     },
   };
 }
@@ -102,7 +127,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <div>
               <Badge className="border-cyan-400/30 bg-cyan-400/10 text-cyan-700 dark:text-cyan-200">
                 <Sparkles className="mr-2 h-3.5 w-3.5" />
-                AppxDeploy service
+                AwayLabs service
               </Badge>
               <h1 className="mt-6 text-5xl font-semibold tracking-[-0.05em] text-slate-950 dark:text-white sm:text-6xl">
                 {service.title}
@@ -130,7 +155,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 A complete delivery plan for {service.title.toLowerCase()}
               </h2>
               <p className="relative mt-4 text-sm leading-7 text-slate-600 dark:text-slate-400">
-                AppxDeploy connects strategy, UI/UX, engineering, cloud deployment, analytics, and support into one practical service experience.
+                AwayLabs connects strategy, design, development, SEO, analytics, and ads into one practical service experience.
               </p>
             </Card>
           </div>
@@ -181,7 +206,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           <SectionHeading
             eyebrow="Related services"
             title="Explore services that pair well with this"
-            description="Most successful launches combine the right design, engineering, cloud, and growth workstreams."
+            description="Most successful launches combine the right website, app, SEO, and paid growth workstreams."
           />
           <div className="mt-14 grid gap-5 md:grid-cols-3">
             {relatedServices.map((item) => {

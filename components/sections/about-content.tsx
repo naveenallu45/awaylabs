@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 import { AnimatedCounter } from "@/components/sections/animated-counter";
 import { Reveal, Stagger, StaggerItem } from "@/components/sections/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
@@ -18,12 +14,12 @@ export function AboutContent() {
           <Reveal>
             <SectionHeading
               align="left"
-              eyebrow="About AppxDeploy"
-              title="A product, cloud, and growth partner for modern businesses"
+              eyebrow="About AwayLabs"
+              title="A website, app, SEO, and ads partner for modern businesses"
             />
             <p className="mt-5 hidden text-base leading-8 text-slate-600 dark:text-slate-400 sm:block sm:text-lg">
               We help founders and teams turn ideas into fast, beautiful, reliable digital products. Our work spans
-              strategy, design, engineering, cloud deployment, SEO, paid campaigns, and long-term support.
+              strategy, design, development, SEO optimization, Google Ads, Meta Ads, and long-term support.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -33,7 +29,7 @@ export function AboutContent() {
                 Ship premium digital experiences without slowing down your business.
               </h2>
               <p className="mt-5 text-base leading-8 text-slate-600 dark:text-slate-400">
-                Our vision is to make enterprise-quality product execution accessible to startups, SMBs, and teams that need a practical partner from first concept to post-launch growth.
+                Our vision is to make premium digital execution accessible to startups, SMBs, and teams that need a practical partner from first concept to post-launch growth.
               </p>
               <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-4">
                 {stats.slice(0, 3).map((stat) => {
@@ -60,7 +56,7 @@ export function AboutContent() {
             <SectionHeading
               eyebrow="Why choose us"
               title="Premium execution, clear delivery, and measurable outcomes"
-              description="We bring the judgement of a product team, the craft of a design studio, and the reliability of a cloud engineering partner."
+              description="We bring the judgement of a product team, the craft of a design studio, and the growth mindset of an SEO and ads partner."
             />
           </Reveal>
           <Stagger className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -85,7 +81,7 @@ export function AboutContent() {
           <Reveal>
             <SectionHeading
               eyebrow="Team"
-              title="Specialists across strategy, design, engineering, and growth"
+              title="Specialists across strategy, design, development, and growth"
               description="A lean senior team structure keeps communication simple while covering the full digital delivery lifecycle."
             />
           </Reveal>
@@ -94,7 +90,7 @@ export function AboutContent() {
               const Icon = member.icon;
               return (
                 <StaggerItem key={member.name}>
-                  <motion.div whileHover={{ y: -8 }} className="h-full">
+                  <div className="h-full transition duration-300 hover:-translate-y-2">
                     <Card className="h-full p-8 text-center">
                       <div className="mx-auto grid h-20 w-20 place-items-center rounded-[1.75rem] bg-gradient-to-br from-cyan-400 to-violet-500 text-white shadow-[0_0_45px_rgba(59,130,246,0.35)]">
                         <Icon className="h-9 w-9" />
@@ -102,7 +98,7 @@ export function AboutContent() {
                       <h3 className="mt-7 text-2xl font-semibold text-slate-950 dark:text-white">{member.name}</h3>
                       <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">{member.role}</p>
                     </Card>
-                  </motion.div>
+                  </div>
                 </StaggerItem>
               );
             })}
@@ -116,7 +112,7 @@ export function AboutContent() {
             <SectionHeading
               eyebrow="Timeline"
               title="Built for modern launches, refined through real delivery"
-              description="Our delivery model has grown from fast website launches into full-stack product, cloud, and growth execution."
+              description="Our delivery model has grown from fast website launches into app, SEO, and paid growth execution."
             />
           </Reveal>
           <div className="relative mt-16">

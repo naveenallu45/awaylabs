@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://appxdeploy.com/sitemap.xml",
+    sitemap: "https://awaylabs.in/sitemap.xml",
   };
 }

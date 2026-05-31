@@ -7,11 +7,24 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { ServiceGrid } from "@/components/sections/service-grid";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Website, App, SEO, Google Ads & Meta Ads Services",
   description:
-    "Explore AppxDeploy services including website development, mobile apps, SEO, ads, cloud deployment, UI/UX, e-commerce, APIs, DevOps, and support.",
+    "Explore AwayLabs services for website development, app development, SEO optimization, Google Ads, and Meta Ads campaigns in Hyderabad and remotely.",
   alternates: {
     canonical: "/services",
+  },
+  openGraph: {
+    title: "AwayLabs Services | Website Development, Apps, SEO & Ads",
+    description:
+      "Website development, app development, SEO optimization, Google Ads, and Meta Ads services for growing businesses.",
+    url: "/services",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AwayLabs Services",
+    description: "Explore website, app, SEO, Google Ads, and Meta Ads services from AwayLabs.",
+    images: ["/opengraph-image"],
   },
 };
 
@@ -23,19 +36,26 @@ export default function ServicesPage() {
         <Reveal className="relative mx-auto max-w-5xl px-4 pb-20 text-center sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Services"
-            title="Software, cloud, and growth services built for modern teams"
+            title="Website, app, SEO, and ads services for growing brands"
           />
           <p className="mx-auto mt-5 hidden max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-400 sm:block">
-            Choose a focused service or bring us in as a full-stack delivery partner across strategy, design,
-            development, cloud, marketing, and support.
+            Choose a focused service or bring us in as your delivery partner across planning, design,
+            development, search visibility, and paid growth campaigns.
           </p>
           <p className="mt-6 text-sm font-medium text-slate-600 dark:text-slate-400">
             Need help choosing a service? Email{" "}
             <a
-              href="mailto:connect@appxdeploy.com"
+              href="mailto:connect@awaylabs.in"
               className="text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
             >
-              connect@appxdeploy.com
+              connect@awaylabs.in
+            </a>{" "}
+            or WhatsApp{" "}
+            <a
+              href="https://wa.me/919908463421"
+              className="text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+            >
+              +91 99084 63421
             </a>
           </p>
         </Reveal>

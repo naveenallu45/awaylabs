@@ -4,7 +4,6 @@ import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -26,18 +25,18 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-slate-200/60 bg-white/70 px-4 py-2.5 shadow-[0_18px_60px_rgba(15,23,42,0.08)] backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/55 dark:shadow-[0_18px_80px_rgba(0,0,0,0.4)]">
-        <Link href="/" aria-label="AppxDeploy home" className="flex items-center gap-4">
+        <Link href="/" aria-label="AwayLabs home" className="flex items-center gap-5">
           <Image
-            src="/appxdeploy-logo.png"
-            alt="AppxDeploy"
+            src="/awaylabs-logo.png"
+            alt="AwayLabs"
             width={128}
             height={128}
             priority
-            className="h-14 w-14 rounded-full object-cover ring-1 ring-cyan-300/30 shadow-[0_0_40px_rgba(59,130,246,0.35)]"
+            className="h-[4.2rem] w-[4.2rem] rounded-full object-cover ring-1 ring-cyan-300/30 shadow-[0_0_40px_rgba(59,130,246,0.35)]"
           />
           <span className="leading-none">
-            <span className="block text-xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
-              App<span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">x</span>Deploy
+            <span className="block text-2xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
+              Away<span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">Labs</span>
             </span>
           </span>
         </Link>
@@ -54,13 +53,7 @@ export function Navbar() {
                   active && "text-slate-950 dark:text-white",
                 )}
               >
-                {active ? (
-                  <motion.span
-                    layoutId="active-nav"
-                    className="absolute inset-0 rounded-full bg-slate-900/5 dark:bg-white/10"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                ) : null}
+                {active ? <span className="absolute inset-0 rounded-full bg-slate-900/5 dark:bg-white/10" /> : null}
                 <span className="relative">{item.label}</span>
               </Link>
             );
@@ -98,31 +91,20 @@ export function Navbar() {
         </div>
       </nav>
 
-      <AnimatePresence>
-        {open ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-slate-950/80 p-4 backdrop-blur-xl lg:hidden"
-          >
-            <motion.div
-              initial={{ y: -18, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -18, opacity: 0 }}
-              className="rounded-[2rem] border border-white/10 bg-slate-950 p-5 shadow-2xl"
-            >
+      {open ? (
+        <div className="fixed inset-0 z-50 bg-slate-950/80 p-4 backdrop-blur-xl lg:hidden">
+          <div className="rounded-[2rem] border border-white/10 bg-slate-950 p-5 shadow-2xl">
               <div className="mb-6 flex items-center justify-between">
                 <Image
-                  src="/appxdeploy-logo.png"
-                  alt="AppxDeploy"
+                  src="/awaylabs-logo.png"
+                  alt="AwayLabs"
                   width={128}
                   height={128}
                   className="h-16 w-16 rounded-2xl object-cover ring-1 ring-cyan-300/30"
                 />
                 <span className="mr-auto leading-none">
                   <span className="block text-2xl font-black tracking-[-0.04em] text-white">
-                    App<span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">x</span>Deploy
+                    Away<span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">Labs</span>
                   </span>
                 </span>
                 <Button type="button" variant="ghost" size="icon" aria-label="Close menu" onClick={() => setOpen(false)}>
@@ -143,10 +125,9 @@ export function Navbar() {
                   Get Started
                 </Link>
               </div>
-            </motion.div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }

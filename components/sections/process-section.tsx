@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 import { Reveal, Stagger, StaggerItem } from "@/components/sections/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Card } from "@/components/ui/card";
@@ -27,12 +23,9 @@ export function ProcessSection() {
                   <span className="absolute right-5 top-5 text-5xl font-semibold text-slate-100 dark:text-white/5">
                     0{index + 1}
                   </span>
-                  <motion.div
-                    className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white"
-                    whileHover={{ rotate: 8, scale: 1.08 }}
-                  >
+                  <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-cyan-400 to-violet-500 text-white transition duration-300 hover:rotate-6 hover:scale-105">
                     <Icon className="h-5 w-5" />
-                  </motion.div>
+                  </div>
                   <h3 className="mt-8 text-xl font-semibold text-slate-950 dark:text-white">{step.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">{step.description}</p>
                 </Card>

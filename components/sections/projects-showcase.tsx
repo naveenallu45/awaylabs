@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Clock3, Layers3 } from "lucide-react";
 
 import { Reveal } from "@/components/sections/reveal";
@@ -35,7 +34,7 @@ export function ProjectsShowcase({ showHeading = true }: { showHeading?: boolean
             description={
               showHeading
                 ? "A premium gallery direction with dummy showcase data, category filtering, tech badges, and coming-soon visual systems."
-                : "Browse polished coming-soon previews shaped for web platforms, mobile products, cloud systems, and growth campaigns."
+                : "Browse polished coming-soon previews shaped for websites, apps, SEO systems, and paid growth campaigns."
             }
           />
         </Reveal>
@@ -60,23 +59,13 @@ export function ProjectsShowcase({ showHeading = true }: { showHeading?: boolean
           </div>
         </Reveal>
 
-        <motion.div layout className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <AnimatePresence mode="popLayout">
-            {visible.map((project, index) => (
-              <motion.div
-                layout
-                key={project.id}
-                initial={{ opacity: 0, y: 24, scale: 0.96 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 12, scale: 0.96 }}
-                transition={{ duration: 0.35, delay: index * 0.03 }}
-                className={cn(index === 0 && showHeading ? "md:col-span-2" : "")}
-              >
-                <ProjectCard project={project} large={index === 0 && showHeading} />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {visible.map((project, index) => (
+            <div key={project.id} className={cn(index === 0 && showHeading ? "md:col-span-2" : "")}>
+              <ProjectCard project={project} large={index === 0 && showHeading} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

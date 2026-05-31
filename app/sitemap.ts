@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { services, serviceSlug } from "@/lib/site-data";
 
-const baseUrl = "https://appxdeploy.com";
+const baseUrl = "https://awaylabs.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

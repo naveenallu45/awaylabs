@@ -18,26 +18,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://appxdeploy.com"),
-  applicationName: "AppxDeploy",
-  authors: [{ name: "AppxDeploy", url: "https://appxdeploy.com" }],
-  creator: "AppxDeploy",
-  publisher: "AppxDeploy",
+  metadataBase: new URL("https://awaylabs.in"),
+  applicationName: "AwayLabs",
+  authors: [{ name: "AwayLabs", url: "https://awaylabs.in" }],
+  creator: "AwayLabs",
+  publisher: "AwayLabs",
   category: "Software Agency",
+  referrer: "origin-when-cross-origin",
   title: {
-    default: "AppxDeploy | Modern Apps, Websites & Cloud Solutions",
-    template: "%s | AppxDeploy",
+    default: "AwayLabs | Website Development, Apps, SEO & Ads",
+    template: "%s | AwayLabs",
   },
   description:
-    "AppxDeploy helps startups and businesses scale with cutting-edge web, mobile, SEO, cloud, and marketing solutions.",
+    "AwayLabs is a Hyderabad and remote digital agency for website development, app development, SEO optimization, Google Ads, and Meta Ads campaigns.",
   keywords: [
-    "AppxDeploy",
-    "software agency",
+    "AwayLabs",
+    "AwayLabs Hyderabad",
+    "digital agency Hyderabad",
     "website development",
+    "website development Hyderabad",
+    "web design Hyderabad",
+    "business website development",
+    "landing page development",
+    "app development",
     "mobile app development",
-    "cloud deployment",
+    "mobile app development Hyderabad",
     "SEO optimization",
-    "DevOps",
+    "SEO agency Hyderabad",
+    "technical SEO",
+    "Google Ads",
+    "Google Ads agency",
+    "Meta Ads",
+    "Facebook ads",
+    "Instagram ads",
+    "Meta Ads campaigns",
   ],
   alternates: {
     canonical: "/",
@@ -49,6 +63,11 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon.ico?v=5",
     apple: "/favicon.png?v=5",
+  },
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
   },
   robots: {
     index: true,
@@ -62,17 +81,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "AppxDeploy | Modern Apps, Websites & Cloud Solutions",
+    title: "AwayLabs | Website Development, Apps, SEO & Ads",
     description:
-      "Premium software agency for web, mobile, cloud, SEO, ads, UI/UX, and product delivery.",
-    url: "https://appxdeploy.com",
-    siteName: "AppxDeploy",
+      "Hyderabad and remote digital agency for modern websites, apps, SEO optimization, Google Ads, and Meta Ads campaigns.",
+    url: "https://awaylabs.in",
+    siteName: "AwayLabs",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "AppxDeploy modern apps, websites, and cloud solutions",
+        alt: "AwayLabs website development, apps, SEO, Google Ads, and Meta Ads",
       },
     ],
     locale: "en_US",
@@ -80,9 +99,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AppxDeploy",
-    description: "Modern apps, websites, cloud solutions, SEO, and digital growth systems.",
+    title: "AwayLabs | Website Development, Apps, SEO & Ads",
+    description: "Build modern websites, apps, SEO systems, Google Ads, and Meta Ads campaigns with AwayLabs.",
     images: ["/opengraph-image"],
+  },
+  other: {
+    "geo.region": "IN-TG",
+    "geo.placename": "Hyderabad",
+    "business:contact_data:locality": "Hyderabad",
+    "business:contact_data:region": "Telangana",
+    "business:contact_data:country_name": "India",
   },
 };
 

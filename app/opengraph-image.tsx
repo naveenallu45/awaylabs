@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "AppxDeploy modern apps, websites, and cloud solutions";
+export const alt = "AwayLabs website development, apps, SEO, Google Ads, and Meta Ads";
 export const size = {
   width: 1200,
   height: 630,
@@ -38,20 +38,20 @@ export default function Image() {
               boxShadow: "0 0 60px rgba(59, 130, 246, 0.55)",
             }}
           >
-            AX
+            AL
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ fontSize: 48, fontWeight: 900, letterSpacing: -2 }}>AppxDeploy</div>
-            <div style={{ marginTop: 6, fontSize: 22, color: "#67e8f9" }}>Deploy. Scale. Succeed.</div>
+            <div style={{ fontSize: 48, fontWeight: 900, letterSpacing: -2 }}>AwayLabs</div>
+            <div style={{ marginTop: 6, fontSize: 22, color: "#67e8f9" }}>Build. Rank. Grow.</div>
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 26 }}>
           <div style={{ maxWidth: 900, fontSize: 76, lineHeight: 0.95, fontWeight: 900, letterSpacing: -4 }}>
-            Modern Apps, Websites & Cloud Solutions
+            Website Development, Apps, SEO & Ads
           </div>
           <div style={{ maxWidth: 850, fontSize: 28, lineHeight: 1.35, color: "#cbd5e1" }}>
-            Premium web, mobile, SEO, cloud, marketing, and custom software delivery for ambitious teams.
+            Hyderabad and remote digital agency for websites, app development, SEO, Google Ads, and Meta Ads.
           </div>
         </div>
       </div>
