@@ -102,7 +102,7 @@ export function Navbar() {
                   height={128}
                   className="h-16 w-16 rounded-2xl object-cover ring-1 ring-cyan-300/30"
                 />
-                <span className="mr-auto leading-none">
+                <span className="mr-auto ml-3 leading-none">
                   <span className="block text-2xl font-black tracking-[-0.04em] text-white">
                     Away<span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">Labs</span>
                   </span>

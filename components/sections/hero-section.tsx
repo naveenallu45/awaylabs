@@ -22,16 +22,16 @@ export function HeroSection() {
             <Sparkles className="mr-2 h-3.5 w-3.5" />
             Website, app, SEO, and ads partner for growing businesses
           </Badge>
-          <h1 className="max-w-5xl text-5xl font-semibold tracking-[-0.05em] text-slate-950 dark:text-white sm:text-6xl lg:text-6xl xl:text-7xl">
-            <span className="block whitespace-nowrap">We Build Modern</span>
-            <span className="block whitespace-nowrap">Websites, Apps &</span>
-            <span className="block whitespace-nowrap">Meta Ads Campaign</span>
+          <h1 className="max-w-full text-[2.65rem] font-semibold leading-[0.95] tracking-[-0.05em] text-slate-950 dark:text-white sm:max-w-5xl sm:text-6xl lg:text-6xl xl:text-7xl">
+            <span className="block sm:whitespace-nowrap">We Build Modern</span>
+            <span className="block sm:whitespace-nowrap">Websites, Apps &</span>
+            <span className="block sm:whitespace-nowrap">Meta Ads Campaign</span>
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300 sm:text-xl">
             AwayLabs helps startups and businesses launch websites, build apps, improve SEO, and run Google and Meta ads.
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <Link href="/contact" className={buttonVariants({ variant: "gradient", size: "lg" })}>
+            <Link href="/contact" className={buttonVariants({ variant: "gradient", size: "lg", className: "hidden sm:inline-flex" })}>
               Start Project <ArrowRight className="h-4 w-4" />
             </Link>
             <Link href="/services" className={buttonVariants({ variant: "outline", size: "lg" })}>
@@ -39,20 +39,25 @@ export function HeroSection() {
             </Link>
           </div>
           <p className="mt-5 text-sm font-medium text-slate-600 dark:text-slate-400">
-            For project enquiries, email{" "}
-            <a
-              href="mailto:connect@awaylabs.in"
-              className="text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
-            >
-              connect@awaylabs.in
-            </a>{" "}
-            or WhatsApp{" "}
-            <a
-              href="https://wa.me/919908463421"
-              className="text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
-            >
-              +91 99084 63421
-            </a>
+            <span className="block sm:inline">
+              For project enquiries, email{" "}
+              <a
+                href="mailto:connect@awaylabs.in"
+                className="text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+              >
+                connect@awaylabs.in
+              </a>
+            </span>
+            <span className="block sm:inline">
+              {" "}
+              or WhatsApp{" "}
+              <a
+                href="https://wa.me/919908463421"
+                className="text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+              >
+                +91 99084 63421
+              </a>
+            </span>
           </p>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {stats.map((stat) => {

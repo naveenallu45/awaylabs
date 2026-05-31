@@ -7,12 +7,14 @@ export function SectionHeading({
   description,
   align = "center",
   className,
+  titleClassName,
 }: {
   eyebrow: string;
   title: string;
   description?: string;
   align?: "left" | "center";
   className?: string;
+  titleClassName?: string;
 }) {
   return (
     <div
@@ -25,7 +27,7 @@ export function SectionHeading({
       <Badge className="border-cyan-400/30 bg-cyan-400/10 text-cyan-600 dark:text-cyan-200">
         {eyebrow}
       </Badge>
-      <h2 className="text-3xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-5xl">
+      <h2 className={cn("text-3xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-5xl", titleClassName)}>
         {title}
       </h2>
       {description ? (

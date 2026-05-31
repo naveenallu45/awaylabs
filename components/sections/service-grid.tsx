@@ -31,14 +31,18 @@ export function ServiceGrid({ compact = false, showHeading = true }: { compact?:
                 <div className="h-full transition duration-300 hover:-translate-y-2 hover:scale-[1.01]">
                   <Card className="group relative h-full overflow-hidden p-6">
                     <div className={cn("absolute inset-x-8 -top-24 h-40 rounded-full bg-gradient-to-r opacity-0 blur-3xl transition duration-500 group-hover:opacity-30", service.gradient)} />
-                    <div className={cn("mb-8 grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br text-white shadow-lg transition group-hover:scale-110", service.gradient)}>
-                      <Icon className="h-6 w-6" />
+                    <div className="mb-6 flex items-center gap-4 sm:mb-8 sm:block">
+                      <div className={cn("grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br text-white shadow-lg transition group-hover:scale-110", service.gradient)}>
+                        <Icon className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-semibold tracking-tight text-slate-950 dark:text-white sm:mt-8">
+                        {service.title}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-semibold tracking-tight text-slate-950 dark:text-white">{service.title}</h3>
                     <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-400">{service.description}</p>
                     <Link
                       href={`/services/${serviceSlug(service.title)}`}
-                      className="mt-7 flex w-fit items-center gap-2 text-sm font-semibold text-cyan-600 opacity-0 transition hover:gap-3 group-hover:opacity-100 dark:text-cyan-300"
+                      className="mt-7 flex w-fit items-center gap-2 text-sm font-semibold text-cyan-600 transition hover:gap-3 sm:opacity-0 sm:group-hover:opacity-100 dark:text-cyan-300"
                     >
                       Explore service <ArrowRight className="h-4 w-4" />
                     </Link>

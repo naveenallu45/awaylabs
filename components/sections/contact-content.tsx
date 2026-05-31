@@ -102,6 +102,7 @@ export function ContactContent() {
             <SectionHeading
               eyebrow="Contact"
               title="Tell us what you want to build"
+              titleClassName="whitespace-nowrap text-[1.7rem] sm:text-5xl"
             />
             <p className="mx-auto mt-5 hidden max-w-3xl text-center text-lg leading-8 text-slate-600 dark:text-slate-400 sm:block">
               Share your goals and preferred service. We will respond with a practical next step for design,
