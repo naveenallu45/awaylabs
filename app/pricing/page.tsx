@@ -38,8 +38,10 @@ export default function PricingPage() {
           <SectionHeading
             eyebrow="Pricing Plans"
             title="AwayLabs Services & Pricing"
-            description="High-value startup packages and result-driven marketing retainers designed to grow your business cleanly."
           />
+          <p className="mx-auto mt-5 hidden sm:block max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-400 sm:text-lg">
+            High-value startup packages and result-driven marketing retainers designed to grow your business cleanly.
+          </p>
         </Reveal>
       </section>
 

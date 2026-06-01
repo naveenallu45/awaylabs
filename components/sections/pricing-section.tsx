@@ -39,6 +39,7 @@ export function PricingSection() {
     : pricingData[0].service;
 
   const [activeService, setActiveService] = React.useState(initialService);
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
   // Keep state in sync with URL if it changes
   React.useEffect(() => {
@@ -46,6 +47,20 @@ export function PricingSection() {
       setActiveService(requestedService);
     }
   }, [requestedService]);
+
+  // Center the selected tab horizontally on mobile viewports
+  React.useEffect(() => {
+    if (containerRef.current) {
+      const activeElement = containerRef.current.querySelector('[data-active="true"]');
+      if (activeElement) {
+        activeElement.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+    }
+  }, [activeService]);
 
   const currentPricing = pricingData.find((s) => s.service === activeService) ?? pricingData[0];
 
@@ -56,7 +71,7 @@ export function PricingSection() {
         <div className="absolute inset-0 bg-slate-900/5 dark:bg-white/5 rounded-[2rem] blur-xl pointer-events-none" />
         
         {/* Scrollable Container for Mobile, Grid/Flex for Desktop */}
-        <div className="relative z-10 flex flex-row flex-nowrap overflow-x-auto pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 scrollbar-none gap-2 sm:grid sm:grid-cols-3 lg:grid-cols-5 bg-slate-100/70 dark:bg-slate-900/40 p-2 rounded-3xl border border-slate-200/50 dark:border-white/5 backdrop-blur-md">
+        <div ref={containerRef} className="relative z-10 flex flex-row flex-nowrap overflow-x-auto pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 scrollbar-none gap-2 sm:grid sm:grid-cols-3 lg:grid-cols-5 bg-slate-100/70 dark:bg-slate-900/40 p-2 rounded-3xl border border-slate-200/50 dark:border-white/5 backdrop-blur-md">
           {pricingData.map((item) => {
             const meta = serviceMetaMap[item.service] || { icon: Globe2, gradient: "from-cyan-400 to-blue-500" };
             const Icon = meta.icon;
@@ -65,6 +80,7 @@ export function PricingSection() {
             return (
               <button
                 key={item.service}
+                data-active={isActive}
                 onClick={() => setActiveService(item.service)}
                 className={cn(
                   "flex items-center justify-center gap-3 shrink-0 px-5 py-3.5 rounded-2xl text-sm font-semibold tracking-tight transition-all duration-300 whitespace-nowrap",
