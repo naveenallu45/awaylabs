@@ -106,7 +106,7 @@ function DashboardMockup() {
             <p className="text-sm text-white/80">Digital growth system</p>
             <div className="mt-8 flex items-end justify-between">
               <div>
-                <p className="text-4xl font-semibold tracking-tight">Full-stack delivery</p>
+                <p className="text-4xl font-semibold tracking-tight">From Idea to Launch</p>
                 <p className="mt-2 text-sm text-white/75">Websites, apps, SEO, and ads aligned</p>
               </div>
               <CheckCircle2 className="h-10 w-10 text-white" />
