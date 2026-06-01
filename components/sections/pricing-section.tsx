@@ -65,13 +65,13 @@ export function PricingSection() {
   const currentPricing = pricingData.find((s) => s.service === activeService) ?? pricingData[0];
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-8 md:space-y-12">
       {/* Services Switcher Tabs */}
       <div className="relative mx-auto max-w-5xl">
         <div className="absolute inset-0 bg-slate-900/5 dark:bg-white/5 rounded-[2rem] blur-xl pointer-events-none" />
         
         {/* Scrollable Container for Mobile, Grid/Flex for Desktop */}
-        <div ref={containerRef} className="relative z-10 flex flex-row flex-nowrap overflow-x-auto pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 scrollbar-none gap-2 sm:grid sm:grid-cols-3 lg:grid-cols-5 bg-slate-100/70 dark:bg-slate-900/40 p-2 rounded-3xl border border-slate-200/50 dark:border-white/5 backdrop-blur-md">
+        <div ref={containerRef} className="relative z-10 flex flex-row flex-nowrap overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 scrollbar-none gap-2 sm:grid sm:grid-cols-3 lg:grid-cols-5 bg-slate-100/70 dark:bg-slate-900/40 p-2 rounded-3xl border border-slate-200/50 dark:border-white/5 backdrop-blur-md">
           {pricingData.map((item) => {
             const meta = serviceMetaMap[item.service] || { icon: Globe2, gradient: "from-cyan-400 to-blue-500" };
             const Icon = meta.icon;
