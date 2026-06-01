@@ -39,12 +39,256 @@ export type Project = {
   accent: string;
 };
 
+export type PricingTier = {
+  name: string;
+  price: string;
+  period?: string;
+  description?: string;
+  popular?: boolean;
+  features: string[];
+};
+
+export type ServicePricing = {
+  service: string;
+  note?: string;
+  tiers: PricingTier[];
+};
+
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
+
+export const pricingData: ServicePricing[] = [
+  {
+    service: "Website Development",
+    tiers: [
+      {
+        name: "Launch",
+        price: "₹9,999",
+        description: "Perfect for startups and local businesses.",
+        features: [
+          "Up to 5 Pages",
+          "Mobile Responsive Design",
+          "Contact Form",
+          "WhatsApp Integration",
+          "Basic SEO Setup",
+          "SSL Certificate",
+          "Free Domain (1 Year)",
+          "Free Hosting (1 Year)",
+          "Google Maps Integration",
+          "7 Days Support",
+        ],
+      },
+      {
+        name: "Growth",
+        price: "₹15,999",
+        description: "Designed for growing businesses that need more visibility and leads.",
+        popular: true,
+        features: [
+          "Up to 10 Pages",
+          "Custom Design",
+          "Blog Setup",
+          "Advanced SEO Setup",
+          "Speed Optimization",
+          "Google Analytics Setup",
+          "Search Console Setup",
+          "Lead Generation Forms",
+          "SSL Certificate",
+          "Free Domain (1 Year)",
+          "Free Hosting (1 Year)",
+          "30 Days Support",
+        ],
+      },
+      {
+        name: "Scale",
+        price: "₹32,999",
+        description: "Built for businesses ready to automate and sell online.",
+        features: [
+          "Up to 20 Pages",
+          "Premium Custom Design",
+          "Payment Gateway Integration",
+          "Blog & Content Management",
+          "Advanced SEO Setup",
+          "Lead Management System",
+          "WhatsApp Automation",
+          "Google Analytics & Search Console",
+          "SSL Certificate",
+          "Free Domain (1 Year)",
+          "Free Hosting (1 Year)",
+          "Priority Support",
+        ],
+      },
+    ],
+  },
+  {
+    service: "App Development",
+    tiers: [
+      {
+        name: "Launch",
+        price: "₹39,999",
+        features: [
+          "Android or Web App",
+          "User Authentication",
+          "Basic Admin Panel",
+          "API Integration",
+          "Deployment Assistance",
+        ],
+      },
+      {
+        name: "Growth",
+        price: "₹79,999",
+        features: [
+          "Android App",
+          "Advanced Admin Panel",
+          "Push Notifications",
+          "Payment Gateway Integration",
+          "Analytics Setup",
+        ],
+      },
+      {
+        name: "Scale",
+        price: "₹1,49,999+",
+        features: [
+          "Android & iOS App",
+          "Custom Features",
+          "CRM Integration",
+          "Advanced Security",
+          "Scalable Architecture",
+          "Priority Support",
+        ],
+      },
+    ],
+  },
+  {
+    service: "SEO Optimization",
+    tiers: [
+      {
+        name: "Launch",
+        price: "₹4,999",
+        period: "/month",
+        features: [
+          "Website SEO Audit",
+          "Basic On-Page SEO",
+          "Meta Tags Optimization",
+          "Keyword Research",
+          "Monthly Report",
+        ],
+      },
+      {
+        name: "Growth",
+        price: "₹9,999",
+        period: "/month",
+        features: [
+          "Everything in Launch",
+          "Technical SEO",
+          "Local SEO",
+          "Competitor Analysis",
+          "Content Optimization",
+          "Google Business Profile Optimization",
+        ],
+      },
+      {
+        name: "Scale",
+        price: "₹19,999",
+        period: "/month",
+        features: [
+          "Everything in Growth",
+          "Advanced Technical SEO",
+          "Authority Building Strategy",
+          "Content Planning",
+          "Growth Reporting",
+          "Ongoing Optimization",
+        ],
+      },
+    ],
+  },
+  {
+    service: "Google Ads Management",
+    note: "Ad Spend Charged Separately.",
+    tiers: [
+      {
+        name: "Launch",
+        price: "₹4,999",
+        period: "/month",
+        features: [
+          "Campaign Setup",
+          "Keyword Research",
+          "Ad Copy Creation",
+          "Conversion Tracking",
+          "Monthly Reporting",
+        ],
+      },
+      {
+        name: "Growth",
+        price: "₹8,999",
+        period: "/month",
+        features: [
+          "Multiple Campaigns",
+          "Landing Page Review",
+          "Weekly Optimization",
+          "Audience Targeting",
+          "Performance Tracking",
+        ],
+      },
+      {
+        name: "Scale",
+        price: "₹14,999",
+        period: "/month",
+        features: [
+          "Advanced Campaign Management",
+          "Remarketing Campaigns",
+          "A/B Testing",
+          "Competitor Monitoring",
+          "Dedicated Optimization",
+        ],
+      },
+    ],
+  },
+  {
+    service: "Meta Ads Management",
+    note: "Ad Spend Charged Separately.",
+    tiers: [
+      {
+        name: "Launch",
+        price: "₹4,999",
+        period: "/month",
+        features: [
+          "Campaign Setup",
+          "Audience Targeting",
+          "Creative Recommendations",
+          "Monthly Report",
+        ],
+      },
+      {
+        name: "Growth",
+        price: "₹8,999",
+        period: "/month",
+        features: [
+          "Lead Generation Campaigns",
+          "Retargeting Campaigns",
+          "Weekly Optimization",
+          "Performance Reporting",
+        ],
+      },
+      {
+        name: "Scale",
+        price: "₹14,999",
+        period: "/month",
+        features: [
+          "Multi-Campaign Management",
+          "Funnel Optimization",
+          "Advanced Audience Segmentation",
+          "Dedicated Reporting",
+        ],
+      },
+    ],
+  },
+];
+
 
 export const services: Service[] = [
   {
