@@ -29,21 +29,20 @@ export function ServiceGrid({ compact = false, showHeading = true }: { compact?:
             return (
               <StaggerItem key={service.title}>
                 <div className="h-full transition duration-300 hover:-translate-y-2 hover:scale-[1.01]">
-                  <Card className="group relative h-full overflow-hidden p-6">
+                  <Card className="group relative h-full overflow-hidden p-6 lg:p-8">
                     <div className={cn("absolute inset-x-8 -top-24 h-40 rounded-full bg-gradient-to-r opacity-0 blur-3xl transition duration-500 group-hover:opacity-30", service.gradient)} />
-                    <div className="mb-6 flex items-center gap-4 sm:mb-8 sm:block">
-                      <div className={cn("grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br text-white shadow-lg transition group-hover:scale-110", service.gradient)}>
+                    <div className="flex items-center gap-4">
+                      <div className={cn("grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br text-white shadow-lg transition group-hover:scale-110", service.gradient)}>
                         <Icon className="h-6 w-6" />
                       </div>
-                      <h3 className="text-xl font-semibold tracking-tight text-slate-950 dark:text-white sm:mt-8">
+                      <h3 className="text-base font-medium text-slate-950 dark:text-white lg:text-2xl">
                         {service.title}
                       </h3>
                     </div>
-                    <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-400">{service.description}</p>
-                    <Link
-                      href={`/services/${serviceSlug(service.title)}`}
-                      className="mt-7 flex w-fit items-center gap-2 text-sm font-semibold text-cyan-600 transition hover:gap-3 sm:opacity-0 sm:group-hover:opacity-100 dark:text-cyan-300"
-                    >
+                    <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 lg:text-base">
+                      {service.description}
+                    </p>
+                    <Link href={`/services/${serviceSlug(service.title)}`} className="mt-2 flex items-center gap-2 text-sm font-semibold text-cyan-600 dark:text-cyan-300 lg:text-base">
                       Explore service <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Card>

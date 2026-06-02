@@ -16,6 +16,7 @@ import {
   Smartphone,
   Sparkles,
   Target,
+  Wrench,
 } from "lucide-react";
 
 export type NavItem = {
@@ -320,6 +321,12 @@ export const services: Service[] = [
     description: "Creative-led campaigns across Facebook and Instagram for awareness, acquisition, and retargeting.",
     icon: Megaphone,
     gradient: "from-pink-400 to-rose-500",
+  },
+  {
+    title: "Maintenance & Support",
+    description: "Reliable support, performance tuning, bug fixes, security patches, and long-term product care.",
+    icon: Wrench,
+    gradient: "from-gray-400 to-slate-500",
   },
 ];
 
