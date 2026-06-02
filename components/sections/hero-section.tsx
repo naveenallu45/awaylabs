@@ -8,7 +8,7 @@ import { stats } from "@/lib/site-data";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[60vh] sm:min-h-screen overflow-hidden bg-slate-50 pt-16 sm:pt-32 dark:bg-slate-950">
+    <section className="relative min-h-screen overflow-hidden bg-slate-50 pt-32 dark:bg-slate-950">
       <div className="mesh-gradient absolute inset-0" />
       <div
         aria-hidden
