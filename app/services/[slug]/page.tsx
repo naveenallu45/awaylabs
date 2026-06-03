@@ -33,11 +33,11 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   return {
     title: `${service.title} Services`,
-    description: `${service.description} Work with AwayLabs for ${service.title.toLowerCase()} in Hyderabad and remotely, with strategy, execution, launch support, and growth-focused optimization.`,
+    description: `${service.description} Work with AwayLabs for ${service.title.toLowerCase()} across India and worldwide, with strategy, execution, launch support, and growth-focused optimization.`,
     keywords: [
       service.title,
-      `${service.title} Hyderabad`,
-      `${service.title} agency`,
+      `${service.title} company`,
+      `${service.title} services`,
       "AwayLabs",
       "website development",
       "app development",

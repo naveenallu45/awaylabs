@@ -9,7 +9,7 @@ import { ServiceGrid } from "@/components/sections/service-grid";
 export const metadata: Metadata = {
   title: "Website, App, SEO, Google Ads & Meta Ads Services",
   description:
-    "Explore AwayLabs services for website development, app development, SEO optimization, Google Ads, and Meta Ads campaigns in Hyderabad and remotely.",
+    "Explore AwayLabs software services for website development, app development, SEO optimization, Google Ads, and Meta Ads for clients across India and worldwide.",
   alternates: {
     canonical: "/services",
   },

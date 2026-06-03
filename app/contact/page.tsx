@@ -6,7 +6,7 @@ import { ContactContent } from "@/components/sections/contact-content";
 export const metadata: Metadata = {
   title: "Contact AwayLabs",
   description:
-    "Contact AwayLabs in Hyderabad or remotely to start a website development, app development, SEO, Google Ads, or Meta Ads project.",
+    "Contact AwayLabs to start a website development, app development, SEO, Google Ads, or Meta Ads project with a software services company operating from Hyderabad.",
   alternates: {
     canonical: "/contact",
   },

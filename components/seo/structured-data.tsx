@@ -14,7 +14,7 @@ export function StructuredData() {
         logo: `${baseUrl}/favicon.png`,
         image: `${baseUrl}/opengraph-image`,
         description:
-          "AwayLabs is a Hyderabad and remote digital agency for website development, app development, SEO optimization, Google Ads, and Meta Ads campaigns.",
+          "AwayLabs is a software services company operating from Hyderabad, serving clients across India and worldwide with website development, app development, SEO, Google Ads, and Meta Ads.",
         email: "connect@awaylabs.in",
         telephone: "+91-9908463421",
         foundingDate: "2024",
@@ -61,7 +61,7 @@ export function StructuredData() {
       {
         "@type": "ProfessionalService",
         "@id": `${baseUrl}/#services`,
-        name: "AwayLabs Software Agency",
+        name: "AwayLabs Software Services Company",
         url: baseUrl,
         description:
           "Website development, app development, SEO optimization, Google Ads, and Meta Ads services for growing businesses.",
@@ -70,7 +70,7 @@ export function StructuredData() {
         email: "connect@awaylabs.in",
         priceRange: "$$",
         provider: { "@id": `${baseUrl}/#organization` },
-        areaServed: ["Hyderabad", "India", "Worldwide"],
+        areaServed: ["India", "Worldwide"],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Hyderabad",
@@ -88,7 +88,7 @@ export function StructuredData() {
               name: service.title,
               description: service.description,
               provider: { "@id": `${baseUrl}/#organization` },
-              areaServed: ["Hyderabad", "India", "Worldwide"],
+              areaServed: ["India", "Worldwide"],
             },
           })),
         },

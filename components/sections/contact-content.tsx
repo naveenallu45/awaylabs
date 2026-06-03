@@ -214,7 +214,7 @@ export function ContactContent() {
             <SectionHeading
               eyebrow="Office locations"
               title="Built in India, available remotely worldwide"
-              description="Connect with AwayLabs in Hyderabad or work with us remotely from anywhere."
+              description="Connect with AwayLabs, operating from Hyderabad and available remotely worldwide."
             />
           </Reveal>
           <Stagger className="mt-14 grid gap-6 md:grid-cols-2">

@@ -51,7 +51,7 @@ export default function Image() {
             Website Development, Apps, SEO & Ads
           </div>
           <div style={{ maxWidth: 850, fontSize: 28, lineHeight: 1.35, color: "#cbd5e1" }}>
-            Hyderabad and remote digital agency for websites, app development, SEO, Google Ads, and Meta Ads.
+            Software services company for websites, app development, SEO, Google Ads, and Meta Ads.
           </div>
         </div>
       </div>
