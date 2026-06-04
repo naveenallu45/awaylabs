@@ -51,14 +51,14 @@ export function Footer() {
                 connect@awaylabs.in
               </Link>
               <Link
-                href="tel:+919908463421"
+                href="tel:+919182179103"
                 className="inline-flex items-center gap-2 text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
               >
                 <Phone className="h-4 w-4" />
-                +91 99084 63421
+                +91 91821 79103
               </Link>
               <Link
-                href="https://wa.me/919908463421"
+                href="https://wa.me/919182179103"
                 className="inline-flex items-center gap-2 text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
               >
                 <MessageCircle className="h-4 w-4" />

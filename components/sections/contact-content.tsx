@@ -22,8 +22,8 @@ type SubmitState = {
 
 const contactCards = [
   { label: "Email", value: "connect@awaylabs.in", href: "mailto:connect@awaylabs.in", icon: Mail },
-  { label: "Phone", value: "+91 99084 63421", href: "tel:+919908463421", icon: Phone },
-  { label: "WhatsApp", value: "Chat on WhatsApp", href: "https://wa.me/919908463421", icon: MessageCircle },
+  { label: "Phone", value: "+91 91821 79103", href: "tel:+919182179103", icon: Phone },
+  { label: "WhatsApp", value: "Chat on WhatsApp", href: "https://wa.me/919182179103", icon: MessageCircle },
   { label: "Response", value: "Within 1 business day", icon: Send },
 ];
 
@@ -125,7 +125,7 @@ export function ContactContent() {
                   </div>
                   <div className="grid gap-5 sm:grid-cols-2">
                     <Field label="Phone">
-                      <Input name="phone" type="tel" placeholder="+91 99084 63421" autoComplete="tel" />
+                      <Input name="phone" type="tel" placeholder="+91 91821 79103" autoComplete="tel" />
                     </Field>
                     <Field label="Service">
                       <Select name="service" defaultValue={selectedService} required>

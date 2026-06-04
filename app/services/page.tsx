@@ -52,10 +52,10 @@ export default function ServicesPage() {
             </a>{" "}
             or WhatsApp{" "}
             <a
-              href="https://wa.me/919908463421"
+              href="https://wa.me/919182179103"
               className="text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
             >
-              +91 99084 63421
+              +91 91821 79103
             </a>
           </p>
         </Reveal>

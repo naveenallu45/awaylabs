@@ -16,7 +16,7 @@ export function StructuredData() {
         description:
           "AwayLabs is a software services company operating from Hyderabad, serving clients across India and worldwide with website development, app development, SEO, Google Ads, and Meta Ads.",
         email: "connect@awaylabs.in",
-        telephone: "+91-9908463421",
+        telephone: "+91-9182179103",
         foundingDate: "2024",
         slogan: "Build. Rank. Grow.",
         knowsAbout: [
@@ -31,7 +31,7 @@ export function StructuredData() {
         contactPoint: [
           {
             "@type": "ContactPoint",
-            telephone: "+91-9908463421",
+            telephone: "+91-9182179103",
             contactType: "customer support",
             areaServed: ["IN", "Worldwide"],
             availableLanguage: ["English", "Hindi", "Telugu"],
@@ -66,7 +66,7 @@ export function StructuredData() {
         description:
           "Website development, app development, SEO optimization, Google Ads, and Meta Ads services for growing businesses.",
         image: `${baseUrl}/opengraph-image`,
-        telephone: "+91-9908463421",
+        telephone: "+91-9182179103",
         email: "connect@awaylabs.in",
         priceRange: "$$",
         provider: { "@id": `${baseUrl}/#organization` },
