@@ -133,7 +133,7 @@ export function Footer() {
 
         <div className="mt-8 flex flex-col gap-5 border-t border-slate-200 pt-6 text-sm dark:border-white/10 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-2">
-            <p>© 2024 AwayLabs. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} AwayLabs. All rights reserved.</p>
             <p className="text-xs text-slate-500 dark:text-slate-500">
               Registered name: AwayLabs Software Services.
             </p>
