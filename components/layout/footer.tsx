@@ -12,6 +12,12 @@ const socials = [
   { label: "Instagram", text: "IG", href: "https://instagram.com" },
 ];
 
+const legalLinks = [
+  { label: "Terms and Conditions", href: "/terms-and-conditions" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Legal", href: "/legal" },
+];
+
 export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-slate-200/70 bg-slate-50 text-slate-700 dark:border-white/10 dark:bg-slate-950 dark:text-slate-300">
@@ -125,11 +131,25 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 border-t border-slate-200 pt-6 text-sm dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} AwayLabs. All rights reserved.</p>
-          <Link href="/contact" className="inline-flex items-center gap-1 font-medium text-cyan-600 dark:text-cyan-300">
-            Start a project <ArrowUpRight className="h-4 w-4" />
-          </Link>
+        <div className="mt-8 flex flex-col gap-5 border-t border-slate-200 pt-6 text-sm dark:border-white/10 lg:flex-row lg:items-center lg:justify-between">
+          <div className="space-y-2">
+            <p>© 2024 AwayLabs. All rights reserved.</p>
+            <p className="text-xs text-slate-500 dark:text-slate-500">
+              Registered name: AwayLabs Software Services.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+            <nav aria-label="Legal links" className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-medium">
+              {legalLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="footer-link">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            <Link href="/contact" className="inline-flex items-center gap-1 font-medium text-cyan-600 dark:text-cyan-300">
+              Start a project <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
